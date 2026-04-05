@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logodonbosco from "./images/donboscologo.png";
+import Logodonbosco from "../assets/images/donboscologo.png";
 
 export default function Header() {
   return (

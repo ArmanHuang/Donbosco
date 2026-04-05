@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Landingpage from "../app/images/landingpage.png"
-import ApplyNow from "../app/images/apppl.png"
-import AvailableCourse from "../app/images/availableCourse.png"
-import NewsEvent from '../app/images/newsEvent.png'
-import PartnerShip from '../app/images/partnerShip.png'
+import Landingpage from "@/assets/images/landingpage.png"
+import ApplyNow from "@/assets/images/apppl.png"
+import AvailableCourse from "@/assets/images/availableCourse.png"
+import NewsEvent from '@/assets/images/newsEvent.png'
+import PartnerShip from '@/assets/images/partnerShip.png'
 import App from "next/app";
 
 export default function Hero() {
@@ -45,7 +45,7 @@ export default function Hero() {
       </div>
 
 
-  <div className="absolute -bottom-14 w-full px-6">
+  <div className="absolute -bottom-14 w-full px-6 z-20">
   <div className="max-w-7xl mx-auto" >
     
     <div className="
