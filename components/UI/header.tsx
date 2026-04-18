@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logodonbosco from "../assets/images/donboscologo.png";
+import Logodonbosco from "@/assets/images/donboscologo.png";
 
 export default function Header() {
   return (
@@ -34,7 +34,7 @@ export default function Header() {
             Programs
           </Link>
 
-          <Link href="/news" className="hover:text-yellow-400 transition">
+          <Link href="/newsevent" className="hover:text-yellow-400 transition">
             News & Events
           </Link>
 

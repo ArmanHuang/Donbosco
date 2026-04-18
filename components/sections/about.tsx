@@ -1,13 +1,12 @@
 import Image from "next/image";
 
-import aboutBg from '@/assets/images/about-bg.png'
 import aboutUs from '@/assets/images/about-us-home-updated.png'
 
 export default function About() {
   return (
     <section className="relative py-24 overflow-hidden">
       <Image
-        src={aboutBg}
+        src="/about-bg.png"
         alt="Background"
         fill
         className="w-full"
@@ -16,7 +15,7 @@ export default function About() {
 
       <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
-        <div className="relative w-full h-[500px]">
+        <div className="relative w-full h-[600px] -left-36">
             <Image
               src={aboutUs}
               alt="Training"
@@ -25,8 +24,8 @@ export default function About() {
             />
         </div>
 
-        <div>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#F59E0B] leading-tight mb-6">
+        <div className="flex flex-col">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#F59E0B] leading-tight mt-36">
             About Don Bosco <br /> Tech ASEAN
           </h2>
 
@@ -40,9 +39,12 @@ export default function About() {
             competitiveness.
           </p>
 
-          <button className="bg-[#F59E0B] hover:bg-[#d97706] text-white font-semibold px-6 py-3 rounded-lg transition shadow-md">
+          <div className="flex justify-end">
+          <button className=" bg-[#F59E0B] w-40 hover:bg-[#d97706] text-white font-semibold px-6 py-4 rounded-lg transition shadow-md ">
             Learn More
           </button>
+          </div>
+         
         </div>
       </div>
     </section>

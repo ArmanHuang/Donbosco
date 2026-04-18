@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Header from "./header";
+import Header from "../components/UI/header";
 import Landingpage from "./images/landingpage.png"
 import Hero from "../components/sections/hero"
 import About from '../components/sections/about'

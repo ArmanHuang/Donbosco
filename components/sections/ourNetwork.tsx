@@ -25,7 +25,7 @@ export default function NetworkPage() {
 
         {/* Right - Text */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-orange-500 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#F59E0B] mb-4">
             Our Network
           </h2>
 
@@ -40,7 +40,7 @@ export default function NetworkPage() {
       {/* Partners Card */}
       <div className="relative -bottom-24 max-w-7xl mx-auto px-6 z-10 ">
         <div className=" bg-white rounded-2xl shadow-xl p-10 text-center ">
-          <h3 className="text-3xl font-bold text-orange-500 mb-4">
+          <h3 className="text-3xl font-bold  text-[#F59E0B] mb-4">
             Our Partners
           </h3>
 

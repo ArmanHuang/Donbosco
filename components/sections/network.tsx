@@ -14,7 +14,7 @@ export default function NetworkPage() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-orange-500 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold  text-[#F59E0B] mb-6">
             Don Bosco Tech Building Youth’s Future
           </h1>
 
