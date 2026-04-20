@@ -41,7 +41,7 @@ export const ourCentersData: Record<string, CountryProgram> = {
           "Don Bosco Youth Center – Bandung",
           "Don Bosco Institute – Yogyakarta",
         ],
-        image: "/indonesia-map.png",
+        image: "/indonesiamap.png",
       },
     ],
   },
@@ -81,11 +81,54 @@ export const ourCentersData: Record<string, CountryProgram> = {
     centers: [
       {
         schools: [
-          "Don Bosco Training Center – Dili",
+          "Don Bosco Youth Center – Comoro Dili",
           "Don Bosco Technical School – Fatumaca",
-          "Don Bosco Youth Center – Comoro",
         ],
         image: "/timorleste-map.png",
+      },
+    ],
+  },
+
+
+  laos: {
+    country: "Laos",
+    centers: [
+      {
+        schools: [
+          "Don Bosco Youth Vocational Training Center – Vientiane"
+        ],
+        image: "/laos-map.png",
+      },
+    ],
+  },
+
+  myanmar: {
+    country: "Myanmar",
+    centers: [
+      {
+        schools: [
+          "Don Bosco Vocational Training Center – Myitkyina",
+          "Don Bosco Youth Center – Mandalay",
+          "Don Bosco Vocational Training Center – Yangon"
+        ],
+        image: "/myanmar-map.png",
+      },
+    ],
+  },
+
+  vietnam: {
+    country: "Vietnam",
+    centers: [
+      {
+        schools: [
+          "Don Bosco Ky Anh Private Vocational Training Center",
+         "Don Bosco Dong Thuan Private Vocational Training Center",
+          "Don Bosco Technical College – Phuoc Loc",
+          "Don Bosco Vocational School – Tan Tien",
+          "Don Bosco Hospitality Training Center – An Re Mai Sen",
+          "Don Bosco Vocational Intermediate School – Da Nang"
+        ],
+        image: "/vietnam-map.png",
       },
     ],
   },

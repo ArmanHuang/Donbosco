@@ -17,11 +17,13 @@ export default function ProgramsPage() {
     <main className="min-h-screen bg-white">
       {/* Banner */}
       <section className="relative w-full h-[300px] md:h-[400px]">
+   
         <img
-          src="/images/program-banner.jpg"
+          src="/ourProgramBackground.png"
           alt="Programs Banner"
-          className="w-full h-full object-cover"
+          className="w-full h-full mt-20 object-cover"
         />
+     
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-center px-6 md:px-20">
           <h1 className="text-3xl md:text-5xl font-bold text-orange-400">
             Our Programs
@@ -49,7 +51,7 @@ export default function ProgramsPage() {
           <select
             value={country}
             onChange={(e) => setCountry(e.target.value)}
-            className="border border-orange-400 rounded-full px-6 py-2 text-gray-700 focus:outline-none"
+            className="border border-orange-400 rounded-full px-6 py-2 text-mist-950 focus:outline-none"
           >
             <option value="">Select Country</option>
             <option value="philippines">Philippines</option>
@@ -57,6 +59,9 @@ export default function ProgramsPage() {
             <option value="cambodia">Cambodia</option>
             <option value="timorleste">Timor Leste</option>
             <option value="thailand">Thailand</option>
+            <option value="laos">Laos</option>
+            <option value="myanmar">Myanmar</option>
+            <option value="vietnam">Vietnam</option>
 
 
             
@@ -75,10 +80,15 @@ export default function ProgramsPage() {
       Our Centers
     </h2>
 
+    <h4 className=" mb-6 text-center text-mist-950">
+    Across 8 countries, Don Bosco Tech ASEAN empowers 36 youth through quality vocational training in diverse communities.
+    </h4>
+    
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
       {/* LEFT */}
-      <ul className="list-disc pl-5 space-y-2">
+      <ul className="list-disc pl-5 m-36 space-y-2">
         {selectedCenter.schools.map((school, i) => (
           <li key={i} className="hover:underline cursor-pointer text-mist-950">
             {school}
@@ -87,11 +97,11 @@ export default function ProgramsPage() {
       </ul>
 
       {/* RIGHT */}
-      <div className="border rounded-lg overflow-hidden">
+      <div className="border rounded-lg overflow-hidden h-96 m-24">
         <img
           src={selectedCenter.image}
           alt="Map"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </div>
 

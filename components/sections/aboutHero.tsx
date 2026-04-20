@@ -17,7 +17,7 @@ export default function AboutUs() {
       <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-start ">
         {/* LEFT TEXT */}
         <div >
-          <h1 className="text-5xl font-bold text-orange-500 mb-6">
+          <h1 className="text-5xl font-bold text-[#F59E0B] mb-6">
             About Us
           </h1>
 

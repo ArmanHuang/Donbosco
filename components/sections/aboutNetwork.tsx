@@ -30,7 +30,7 @@ export default function AboutNetwork() {
 
           {/* TEXT */}
           <div className="w-1/2 pl-10">
-            <h1 className="text-4xl font-bold text-orange-500 mb-4">
+            <h1 className="text-4xl font-bold text-[#F59E0B] mb-4">
               Our Networks
             </h1>
             <p className="text-gray-700 text-sm leading-relaxed max-w-md">
@@ -49,7 +49,7 @@ export default function AboutNetwork() {
           <div className="flex flex-col gap-6 w-1/2">
             {/* OVERALL OBJECTIVE */}
             <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 shadow-md">
-              <h2 className="text-orange-500 font-semibold text-lg mb-2">
+              <h2 className="text-[#F59E0B] font-semibold text-lg mb-2">
                 Overall Objective
               </h2>
               <p className="text-gray-700 text-sm">
@@ -60,7 +60,7 @@ export default function AboutNetwork() {
 
             {/* PROJECT OBJECTIVES */}
             <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 shadow-md">
-              <h2 className="text-orange-500 font-semibold text-lg mb-2 text-center">
+              <h2 className="text-[#F59E0B] font-semibold text-lg mb-2 text-center">
                 Project Objectives
               </h2>
               <ol className="text-gray-700 text-sm list-decimal list-inside space-y-1">

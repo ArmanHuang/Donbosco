@@ -13,7 +13,7 @@ export default function AboutTeam() {
       />
 
         <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-500 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#F59E0B] mb-6">
             Don Bosco Tech ASEAN Today
           </h1>
 
@@ -37,7 +37,7 @@ export default function AboutTeam() {
                 { year: "2022", text: "Delegation visits Bangkok fostering industry collaboration." },
                 { year: "2023", text: "Central office moved to Philippines and expanded partnerships." },
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center w-1/4 text-center">
+                <div key={i} className="flex flex-col items-center w-1/4 text-center text-mist-950">
                   <div className="bg-white shadow-md rounded-xl p-4 mb-4 text-xs max-w-[180px]">
                     {item.text}
                   </div>
@@ -71,7 +71,7 @@ export default function AboutTeam() {
 
    
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#F59E0B] mb-12">
             Our Team
           </h2>
 
@@ -88,6 +88,10 @@ export default function AboutTeam() {
                 key={i}
                 className="bg-gray-50 rounded-2xl p-4 shadow-md w-[160px]"
               >
+
+                <h3 className="text-xs font-semibold text-[#F59E0B] mb-1">
+                  {member.name}
+                </h3>
                 <div className="w-full h-[120px] relative mb-3">
                   <Image
                     src={member.img}
@@ -96,9 +100,7 @@ export default function AboutTeam() {
                     className="object-cover rounded-xl"
                   />
                 </div>
-                <h3 className="text-xs font-semibold text-orange-500 mb-1">
-                  {member.name}
-                </h3>
+               
                 <p className="text-[10px] text-gray-600">
                   {member.role}
                 </p>
