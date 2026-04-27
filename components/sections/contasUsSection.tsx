@@ -8,15 +8,15 @@ export default function ContactPage() {
   const [activeTab, setActiveTab] = useState<"contact" | "registration">("contact");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f5d9a6] to-[#f8f8f8]">
+    <div className="min-h-screen ">
       {/* HERO */}
       <div className="relative h-[300px] w-full">
         <img
-          src="/hero.jpg"
+          src="/contactus-bg.png"
           alt="Hero"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-orange-500/40 flex items-center px-10">
+        <div className="absolute inset-0 flex items-center px-10">
           <h1 className="text-4xl font-bold text-black">
             DON BOSCO <br /> TECH ASEAN
           </h1>

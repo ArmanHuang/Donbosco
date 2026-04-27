@@ -1,9 +1,36 @@
-import Image from "next/image";
-import { NewsItem } from "@/types/news";
+"use client";
+
+
 import CardSlider from "../UI/cardSlider";
-import { newsData } from "@/data/news";
+import { useEffect, useState } from "react";
+
 
 export default function NewsSection() {
+  const [news, setNews] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(`/api/news-api`);
+
+        if (!res.ok) {
+          setNews([]);
+          return;
+        }
+
+        const data = await res.json();
+        setNews(data);
+      } catch (error) {
+        console.error(error);
+        setNews([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
   return (
     <section className="relative py-24  bg-gray-100 overflow-hidden">
       {/* Background */}
@@ -24,7 +51,7 @@ export default function NewsSection() {
 
         {/* Card */}
         <div className="max-w-[1200px] w-full h-[442px] mx-auto bg-white  rounded-2xl shadow-xl p-8 md:p-12">           
-          <CardSlider data={newsData}/>
+          <CardSlider data={news}/>
         </div>
       </div>
 

@@ -27,7 +27,7 @@ export default function AboutTeam() {
           {/* TIMELINE */}
           <div className="relative mt-16">
             {/* line */}
-            <div className="h-1 bg-orange-400 w-full absolute top-1/2 -translate-y-1/2" />
+            <div className="h-1 bg-[#F59E0B] w-full absolute top-1/2 -translate-y-1/2" />
 
             <div className="flex justify-between items-start relative">
               {/* ITEM */}
@@ -42,9 +42,9 @@ export default function AboutTeam() {
                     {item.text}
                   </div>
 
-                  <div className="w-4 h-4 bg-orange-500 rounded-full z-10" />
+                  <div className="w-4 h-4 bg-[#F59E0B] rounded-full z-10" />
 
-                  <span className="mt-2 text-orange-500 font-semibold text-sm">
+                  <span className="mt-2 text-[#F59E0B] font-semibold text-sm">
                     {item.year}
                   </span>
                 </div>

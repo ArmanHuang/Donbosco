@@ -2,7 +2,7 @@ import { CountryProgram } from "@/types/program";
 
 export const programsData: Record<string, CountryProgram> = {
   philippines: {
-    country: "Philippines",
+    country: "philippines",
     programs: [
       {
         title: "Shielded Metal Arc Welding",
@@ -109,7 +109,7 @@ export const programsData: Record<string, CountryProgram> = {
   },
 
   cambodia: {
-    country: "Cambodia",
+    country: "cambodia",
     programs: [
       {
         title: "Media Communication",
@@ -184,7 +184,7 @@ export const programsData: Record<string, CountryProgram> = {
 },
 
   indonesia: {
-  country: "Indonesia",
+  country: "indonesia",
   programs: [
     {
       title: "Welding",
@@ -258,7 +258,7 @@ export const programsData: Record<string, CountryProgram> = {
 },
 
 timorleste: {
-  country: "Timor Leste",
+  country: "timorleste",
   programs: [
     {
       title: "Welding",
@@ -329,7 +329,7 @@ timorleste: {
   ]
 },
 thailand: {
-  country: "Thailand",
+  country: "thailand",
   programs: [
     {
       title: "Mechanic (Diploma/Grade10-12)",

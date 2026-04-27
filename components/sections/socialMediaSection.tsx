@@ -4,7 +4,7 @@ import { socialData } from "@/data/social";
 
 export default function SocialMediaSection() {
   return (
-    <section className="bg-gradient-to-b from-yellow-100 to-yellow-200 py-20 px-6 md:px-20">
+    <section className="bg-[linear-gradient(180deg,rgba(255,231,179,0.91)_0%,rgba(250,250,250,0.91)_100%)] py-20 px-6 md:px-20">
 
       {/* TITLE */}
       <h2 className="text-4xl md:text-5xl font-bold text-orange-500 text-center mb-12">

@@ -1,6 +1,11 @@
 import { CountryProgram } from "@/types/program"
+import { CenterItem } from "@/types/program";
 
-export const ourCentersData: Record<string, CountryProgram> = {
+
+export const ourCentersData: Record<string, {
+  country: string;
+  centers: CenterItem[];
+}>  = {
   philippines: {
     country: "philippines",
     centers: [

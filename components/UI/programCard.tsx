@@ -5,10 +5,10 @@ export default function ProgramCard({ item }: { item: ProgramItem }) {
     <div className="border rounded-xl p-4 shadow-sm">
       <img
         src={item.image}
-        className="w-full h-72 object-fill rounded-lg mb-4"
+        className="w-full h-72 object-cover rounded-lg mb-4"
       />
 
-      <h3 className="text-orange-500 font-bold text-lg mb-2">
+      <h3 className="text-[#F59E0B] font-bold text-lg mb-2">
         {item.title}
       </h3>
 
@@ -16,10 +16,11 @@ export default function ProgramCard({ item }: { item: ProgramItem }) {
         {item.description}
       </p>
 
-      <p className="font-semibold text-orange-500">School</p>
-      <ul className="list-disc ml-5 text-sm  text-gray-600">
-        {item.schools.map((school, i) => (
-          <li key={i}>{school}</li>
+      <p className="font-semibold text-[#F59E0B]">Schools</p>
+
+      <ul className="list-disc ml-5 text-sm text-gray-600">
+        {item.schools.map((school) => (
+          <li key={school}>{school}</li>
         ))}
       </ul>
     </div>

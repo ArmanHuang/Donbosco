@@ -1,15 +1,50 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { newsData } from "@/data/news";
 
 export default function NewsGridSection() {
+  const [news, setNews] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(`/api/news-api`);
+
+        if (!res.ok) {
+          setNews([]);
+          return;
+        }
+
+        const data = await res.json();
+        setNews(data);
+      } catch (error) {
+        console.error(error);
+        setNews([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
   return (
-    <section className="bg-gradient-to-b from-white to-yellow-100 py-20 px-6 md:px-20">
-      
-      {/* TITLE */}
-      <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-orange-500">
+    <main className="min-h-screen bg-white">
+
+      {/* 🔥 BANNER */}
+      <section className="relative w-full h-[300px] md:h-[400px]">
+        <img
+          src="/news-bg.jpg"
+          alt="News Banner"
+          className="w-full h-full object-cover"
+        />
+      </section>
+
+      {/* 🔥 TITLE */}
+      <section className="py-12 px-6 md:px-20 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#F59E0B]">
           News & Events
         </h2>
 
@@ -19,47 +54,66 @@ export default function NewsGridSection() {
         </p>
 
         <div className="w-full h-[3px] bg-orange-400 mt-6"></div>
-      </div>
+      </section>
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {newsData.map((item) => (
-          <div key={item.id} className="cursor-pointer group">
+      {/* 🔥 CONTENT */}
+      <section className="px-6 md:px-20 pb-20">
 
-            {/* IMAGE */}
-            <div className="relative w-full h-[180px] overflow-hidden rounded">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover group-hover:scale-105 transition duration-300"
-              />
-            </div>
+        {/* LOADING */}
+        {loading && (
+          <p className="text-center text-gray-500">Loading news...</p>
+        )}
 
-            {/* DATE */}
-            {item.date && (
-              <p className="text-orange-500 text-xs mt-2 text-right">
-                {item.date}
-              </p>
-            )}
+        {/* GRID */}
+        {!loading && news.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {news.map((item) => (
+              <div key={item.id} className="cursor-pointer group">
 
-            {/* TITLE */}
-            <h3 className="text-sm font-semibold text-gray-800 mt-1 leading-snug">
-              {item.title}
-            </h3>
+                {/* IMAGE */}
+                <div className="relative w-full h-[180px] overflow-hidden rounded">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+
+                {/* DATE */}
+                {item.date && (
+                  <p className="text-[#F59E0B] text-xs mt-2 text-right">
+                    {item.date}
+                  </p>
+                )}
+
+                {/* TITLE */}
+                <h3 className="text-sm font-semibold text-gray-800 mt-1 leading-snug">
+                  {item.title}
+                </h3>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        )}
 
-      {/* PAGINATION (dummy dulu) */}
-      <div className="flex justify-center mt-10 gap-3 items-center">
-        <span className="cursor-pointer">1</span>
-        <span className="cursor-pointer">2</span>
-        <span className="cursor-pointer">3</span>
-        <button className="bg-orange-400 text-white px-2 py-1 rounded">
-          →
-        </button>
-      </div>
-    </section>
+        {/* EMPTY */}
+        {!loading && news.length === 0 && (
+          <p className="text-center text-gray-500 mt-10">
+            No news available
+          </p>
+        )}
+
+        {/* PAGINATION */}
+        <div className="flex justify-center mt-10 gap-3 items-center">
+          <span className="cursor-pointer">1</span>
+          <span className="cursor-pointer">2</span>
+          <span className="cursor-pointer">3</span>
+          <button className="bg-[#F59E0B] text-white px-2 py-1 rounded">
+            →
+          </button>
+        </div>
+
+      </section>
+    </main>
   );
 }
