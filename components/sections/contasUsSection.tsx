@@ -3,6 +3,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { addRegister } from "@/lib/services/registerService";
+import { addContact } from "@/lib/services/contactService";
 
 export default function ContactPage() {
   const [activeTab, setActiveTab] = useState<"contact" | "registration">("contact");
@@ -10,7 +12,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen ">
       {/* HERO */}
-      <div className="relative h-[300px] w-full">
+      <div className="relative h-[700px] w-full">
         <img
           src="/contactus-bg.png"
           alt="Hero"
@@ -67,97 +69,246 @@ export default function ContactPage() {
 
 /* ================= CONTACT FORM ================= */
 function ContactForm() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    mobileno: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setSuccess(false);
+
+    try {
+      await addContact(form);
+
+      setSuccess(true);
+
+      // reset form
+      setForm({
+        name: "",
+        email: "",
+        mobileno: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <form className="text-neutral-900 space-y-4 text-left">
+    <form onSubmit={handleSubmit} className="text-neutral-900 space-y-4 text-left">
+      
       <div>
-        <label className="block mb-1">Name</label>
-        <input type="text" className="w-full border p-2 rounded" />
+        <label>Name</label>
+        <input
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          className="w-full border p-2 rounded"
+        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block mb-1">Email Address</label>
-          <input type="email" className="w-full border p-2 rounded" />
+          <label>Email Address</label>
+          <input
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={handleChange}
+            className="w-full border p-2 rounded"
+          />
         </div>
         <div>
-          <label className="block mb-1">Mobile No.</label>
-          <input type="text" className="w-full border p-2 rounded" />
+          <label>Mobile No.</label>
+          <input
+            name="mobileno"
+            value={form.mobileno}
+            onChange={handleChange}
+            className="w-full border p-2 rounded"
+          />
         </div>
       </div>
 
       <div>
-        <label className="block mb-1">Subject</label>
-        <input type="text" className="w-full border p-2 rounded" />
+        <label>Subject</label>
+        <input
+          name="subject"
+          value={form.subject}
+          onChange={handleChange}
+          className="w-full border p-2 rounded"
+        />
       </div>
 
       <div>
-        <label className="block mb-1">Message</label>
-        <textarea rows={5} className="w-full border p-2 rounded"></textarea>
+        <label>Message</label>
+        <textarea
+          name="message"
+          rows={5}
+          value={form.message}
+          onChange={handleChange}
+          className="w-full border p-2 rounded"
+        />
       </div>
 
       <div className="text-center pt-4">
         <button
           type="submit"
+          disabled={loading}
           className="bg-orange-500 text-white px-6 py-2 rounded-lg"
         >
-          Submit
+          {loading ? "Sending..." : "Submit"}
         </button>
       </div>
+
+      {success && (
+        <p className="text-green-600 text-center">
+          ✅ Message sent successfully!
+        </p>
+      )}
     </form>
   );
 }
 
 /* ================= REGISTRATION FORM ================= */
 function RegistrationForm() {
-  return (
-    <form className="text-neutral-900 space-y-4 text-left">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label>Full Name</label>
-          <input className="w-full border p-2 rounded" />
-        </div>
-        <div>
-          <label>Last Education</label>
-          <input className="w-full border p-2 rounded" />
-        </div>
-      </div>
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    mobileno: "",
+    subject: "",
+    message: "",
+  });
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setSuccess(false);
+
+    try {
+      await addRegister(form);
+
+      setSuccess(true);
+
+      // reset form
+      setForm({
+        name: "",
+        email: "",
+        mobileno: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="text-neutral-900 space-y-4 text-left">
+      
       <div>
-        <label>Address</label>
-        <input className="w-full border p-2 rounded" />
+        <label>Name</label>
+        <input
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          className="w-full border p-2 rounded"
+        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label>Email Address</label>
-          <input className="w-full border p-2 rounded" />
+          <input
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={handleChange}
+            className="w-full border p-2 rounded"
+          />
         </div>
         <div>
           <label>Mobile No.</label>
-          <input className="w-full border p-2 rounded" />
+          <input
+            name="mobileno"
+            value={form.mobileno}
+            onChange={handleChange}
+            className="w-full border p-2 rounded"
+          />
         </div>
       </div>
 
       <div>
-        <label>Country</label>
-        <input className="w-full border p-2 rounded" />
-      </div>
-
-      <div>
-        <label>Program</label>
-        <input className="w-full border p-2 rounded" />
+        <label>Subject</label>
+        <input
+          name="subject"
+          value={form.subject}
+          onChange={handleChange}
+          className="w-full border p-2 rounded"
+        />
       </div>
 
       <div>
         <label>Message</label>
-        <textarea rows={5} className="w-full border p-2 rounded" />
+        <textarea
+          name="message"
+          rows={5}
+          value={form.message}
+          onChange={handleChange}
+          className="w-full border p-2 rounded"
+        />
       </div>
 
       <div className="text-center pt-4">
-        <button className="bg-orange-500 text-white px-6 py-2 rounded-lg">
-          Submit
+        <button
+          type="submit"
+          disabled={loading}
+          className="bg-orange-500 text-white px-6 py-2 rounded-lg"
+        >
+          {loading ? "Sending..." : "Submit"}
         </button>
       </div>
+
+      {success && (
+        <p className="text-green-600 text-center">
+          ✅ Message sent successfully!
+        </p>
+      )}
     </form>
   );
 }
