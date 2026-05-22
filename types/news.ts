@@ -1,4 +1,4 @@
-import type { StatsItem } from "@/types/StatsItem";
+import type { StatsItem } from "@/types/statsItem";
 export type NewsItem = {
     id : number;
     title: string;
