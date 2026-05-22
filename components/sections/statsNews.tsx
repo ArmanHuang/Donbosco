@@ -1,4 +1,4 @@
-import { StatsItem } from "@/types/statsItem"
+import { StatsItem } from "@/types/StatsItem"
 import { CountUp } from "../UI/countUp";
 
 type Props = {
