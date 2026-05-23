@@ -19,7 +19,7 @@ const statsData: StatsItem[] = [
   { label: "Partners",image:"/partnershipLogo.png" , value: 1710 },
 ];
 
-
+h
 
 export default function Home() {
   return (
