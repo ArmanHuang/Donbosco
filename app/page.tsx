@@ -9,17 +9,14 @@ import StatsNews from '@/components/sections/statsNews'
 import OurNetwork from '@/components/sections/ourNetwork'
 import NetworkPage from "@/components/sections/network";
 import Footer from '@/components/sections/footer'
+import type { StatsItem } from "@/types/StatsItem";
 
-const statsData: {
-  label: string;
-  image: string;
-  value: number;
-}[] = [
-  { label: "Students", image: "/studentsLogo.png", value: 13944 },
-  { label: "Graduates", image: "/graduatesLogo.png", value: 6350 },
-  { label: "Centers", image: "/centersLogo.png", value: 36 },
-  { label: "Programs", image: "/programLogo.png", value: 226 },
-  { label: "Partners", image: "/partnershipLogo.png", value: 1710 },
+const statsData: StatsItem[] = [
+  { label: "Students",image:"/studentsLogo.png" ,value: 13944 },
+  { label: "Graduates",image:"/graduatesLogo.png" , value: 6350 },
+  { label: "Centers",image:"/centersLogo.png" , value: 36 },
+  { label: "Programs",image:"/programLogo.png" , value: 226 },
+  { label: "Partners",image:"/partnershipLogo.png" , value: 1710 },
 ];
 
 
