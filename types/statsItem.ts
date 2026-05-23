@@ -1,5 +1,5 @@
-export interface StatsItem {
-  label: string;
-  image: string;
-  value: number;
-}
+export type StatsItem = {
+    label: string;
+    image: string;
+    value: number;
+};
