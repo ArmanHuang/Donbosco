@@ -17,9 +17,9 @@ export default function NetworkPage() {
         {/* Left - Map */}
         <div className="flex justify-center">
           <img
-            src="/mapIndo.png"
+            src="/world.png"
             alt="ASEAN Map"
-            className="w-full max-w-md object-contain"
+            className="w-full max-w-2xl object-contain"
           />
         </div>
 

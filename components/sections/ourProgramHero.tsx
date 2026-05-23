@@ -90,7 +90,7 @@ export default function OurProgramsHero() {
         </p>
 
         {/* Select Country */}
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex justify-end">
           <select
             value={country}
             onChange={(e) => setCountry(e.target.value)}

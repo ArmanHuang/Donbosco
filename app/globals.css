@@ -25,3 +25,13 @@ body {
   color: var(--foreground);
   font-family: var(--font-josefin);
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

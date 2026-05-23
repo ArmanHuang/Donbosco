@@ -16,14 +16,14 @@ export default function AboutNetwork() {
       </div>
 
 
-        <div className="relative z-20 max-w-7xl w-full flex items-center justify-between px-6">
+        <div className="relative z-50 max-w-7xl w-full flex items-center justify-between px-6">
           {/* MAP */}
           <div className="w-1/2">
             <Image
-              src="/mapIndo.png" // ganti sesuai asset kamu
+              src="/world.png" // ganti sesuai asset kamu
               alt="ASEAN Map"
-              width={500}
-              height={300}
+              width={800}
+              height={500}
               className="object-contain"
             />
           </div>

@@ -4,6 +4,7 @@ import ApplyNow from "@/assets/images/apppl.png";
 import AvailableCourse from "@/assets/images/availableCourse.png";
 import NewsEvent from "@/assets/images/newsEvent.png";
 import PartnerShip from "@/assets/images/partnerShip.png";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -22,9 +23,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-6xl px-6 md:px-12 py-20">
+      <div className="relative z-10 max-w-6xl px-4 md:px-12 pt-20 pb-20">
         
-        <p className="text-orange-400 font-semibold text-sm md:text-lg mb-2 md:mb-3">
+        <p className="text-[#F59E0B] font-semibold text-xl md:text-4xl mb-2 md:mb-3">
           Don Bosco Tech ASEAN
         </p>
 
@@ -38,7 +39,7 @@ export default function Hero() {
           for the next generation.
         </p>
 
-        <button className="bg-orange-500 hover:bg-orange-600 transition px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold shadow-lg text-sm md:text-base">
+        <button className="bg-[#F59E0B] hover:bg-[#d97706] transition px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold shadow-lg text-sm md:text-base">
           Explore More
         </button>
       </div>
@@ -56,33 +57,33 @@ export default function Hero() {
           ">
 
             {/* ITEM */}
-            <div className="flex items-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6 border-b sm:border-b-0 md:border-r md:border-white/20">
-              <Image src={ApplyNow} alt="Apply Now" className="w-12 h-12 md:w-20 md:h-20" />
-              <p className="text-lg md:text-2xl font-semibold text-[#F59E0B]">
-                Apply Now
-              </p>
+            <div className="flex justify-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6 border-b sm:border-b-0 md:border-r md:border-white/20">
+               <Link href="/contact">
+                  <Image
+                    src={ApplyNow}
+                    alt="Apply Now"
+                    className="w-35 h-35 md:w-60 md:h-18 object-contain"
+                  />
+                </Link>
             </div>
 
-            <div className="flex items-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6 border-b sm:border-b-0 md:border-r md:border-white/20">
-              <Image src={AvailableCourse} alt="Courses" className="w-12 h-12 md:w-20 md:h-20" />
-              <p className="text-lg md:text-2xl font-semibold text-[#F59E0B]">
-                Courses
-              </p>
+            <div className="flex justify-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6 border-b sm:border-b-0 md:border-r md:border-white/20">
+              <Link href="/programs">
+                <Image src={AvailableCourse} alt="Courses" className="w-35 h-35 md:w-60 md:h-18 object-contain" />
+              </Link>
             </div>
 
-            <div className="flex items-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6 border-b sm:border-b-0 md:border-r md:border-white/20">
-              <Image src={NewsEvent} alt="News" className="w-12 h-12 md:w-20 md:h-20" />
-              <p className="text-lg md:text-2xl font-semibold text-[#F59E0B]">
-                News & Event
-              </p>
+            <div className="flex justify-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6 border-b sm:border-b-0 md:border-r md:border-white/20">
+              <Link href="/newsevent">
+                <Image src={NewsEvent} alt="News" className="w-35 h-35 md:w-60 md:h-18 object-contain"/>
+              </Link>
             </div>
 
-            <div className="flex items-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6">
-              <Image src={PartnerShip} alt="Partnership" className="w-12 h-12 md:w-20 md:h-20" />
-              <p className="text-lg md:text-2xl font-semibold text-[#F59E0B]">
-                Partnership
-              </p>
-            </div>
+           <div className="flex justify-center gap-3 md:gap-4 py-6 md:py-8 px-4 md:px-6 border-b sm:border-b-0 md:border-r md:border-white/20">
+            <Link href="/partnership">
+              <Image src={PartnerShip} alt="Partnership" className="w-35 h-35 md:w-60 md:h-18 object-contain"/>
+            </Link>
+          </div>
 
           </div>
 

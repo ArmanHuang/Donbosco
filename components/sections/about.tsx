@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import aboutUs from '@/assets/images/about-us-home-updated.png'
 
 export default function About() {
@@ -40,9 +40,11 @@ export default function About() {
           </p>
 
           <div className="flex justify-end">
-          <button className=" bg-[#F59E0B] w-40 hover:bg-[#d97706] text-white font-semibold px-6 py-4 rounded-lg transition shadow-md ">
-            Learn More
-          </button>
+          <Link href="/about">
+            <button className="bg-[#F59E0B] w-40 hover:bg-[#d97706] text-white font-semibold px-6 py-4 rounded-lg transition shadow-md">
+              Learn More
+            </button>
+          </Link>
           </div>
          
         </div>

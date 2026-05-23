@@ -24,12 +24,15 @@ export default function Header() {
         
         {/* Logo */}
         <div className="flex items-center gap-3">
+          <Link href="/" className="block">
           <Image
             src={Logodonbosco}
             alt="Don Bosco Tech ASEAN"
             width={140}
             height={140}
+            className="object-contain"
           />
+        </Link>
         </div>
 
         {/* Desktop Nav */}

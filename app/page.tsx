@@ -11,6 +11,7 @@ import NetworkPage from "@/components/sections/network";
 import Footer from '@/components/sections/footer'
 import { StatsItem } from "@/types/StatsItem";
 
+
 const statsData: StatsItem[] = [
   { label: "Students",image:"/studentsLogo.png" ,value: 13944 },
   { label: "Graduates",image:"/graduatesLogo.png" , value: 6350 },

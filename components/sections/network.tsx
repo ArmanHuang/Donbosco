@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 export default function NetworkPage() {
   return (
     <div className="w-full">
@@ -27,7 +28,7 @@ export default function NetworkPage() {
           </p>
 
           <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">
-            Explore More
+            <Link href="/programs">Explore More</Link>
           </button>
         </div>
       </section>
