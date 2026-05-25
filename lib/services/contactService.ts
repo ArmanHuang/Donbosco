@@ -23,3 +23,4 @@ export const addContact = async (data: {
     throw error;
   }
 };
+

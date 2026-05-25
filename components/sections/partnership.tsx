@@ -5,9 +5,19 @@ import { useState } from "react";
 import Header from "@/components/UI/header";
 import Footer from "@/components/sections/footer";
 
-export default function PartnershipPage() {
+import { addPartner } from "@/lib/services/partnerShipservice";
 
+export default function PartnershipPage() {
   const [page, setPage] = useState(1);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobileno: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
 
   const partnerPages = {
     1: [
@@ -40,16 +50,47 @@ export default function PartnershipPage() {
     ],
   };
 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+
+      await addPartner(formData);
+
+      alert("Partnership form submitted successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        mobileno: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Failed to submit partnership form.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       {/* HEADER */}
       <Header />
 
       <section className="relative w-full overflow-hidden bg-[#f5f5f5]">
-
         {/* HERO SECTION */}
         <div className="relative w-full min-h-screen">
-
           {/* Background */}
           <div className="absolute inset-0">
             <img
@@ -64,7 +105,6 @@ export default function PartnershipPage() {
 
           {/* Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-16 items-center">
-
             {/* Left Image */}
             <div className="flex justify-center">
               <img
@@ -76,7 +116,6 @@ export default function PartnershipPage() {
 
             {/* Right Text */}
             <div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-[#F59E0B] leading-tight mb-6">
                 Invest in futures, transform lives.
               </h1>
@@ -105,7 +144,6 @@ export default function PartnershipPage() {
               >
                 LEARN MORE
               </button>
-
             </div>
           </div>
         </div>
@@ -118,13 +156,11 @@ export default function PartnershipPage() {
             backgroundImage: "url('/about-partnership.jpg')",
           }}
         >
-
           {/* Overlay */}
           <div className="absolute inset-0 bg-white/80"></div>
 
           {/* Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-
             <h2 className="text-5xl font-bold text-[#F59E0B] mb-6">
               Our Partners
             </h2>
@@ -138,22 +174,20 @@ export default function PartnershipPage() {
 
             {/* Partner Logos */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-16 items-center">
-
               {partnerPages[page as keyof typeof partnerPages].map(
                 (logo, index) => (
                   <img
                     key={index}
                     src={logo}
+                    alt={`Partner ${index}`}
                     className="h-24 object-contain mx-auto"
                   />
                 )
               )}
-
             </div>
 
             {/* Pagination */}
             <div className="flex justify-center items-center gap-5 mt-20">
-
               {/* Prev */}
               <button
                 onClick={() => setPage(page === 1 ? 2 : 1)}
@@ -193,19 +227,15 @@ export default function PartnershipPage() {
               >
                 →
               </button>
-
             </div>
           </div>
         </div>
 
         {/* CONTACT SECTION */}
         <div className="bg-[#f5f5f5] py-28">
-
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
-
             {/* Left Text */}
             <div>
-
               <h2 className="text-5xl font-bold text-[#F59E0B] mb-8">
                 We would like to discuss
               </h2>
@@ -226,12 +256,14 @@ export default function PartnershipPage() {
                 contributions can shape brighter futures
                 in Southeast Asia.
               </p>
-
             </div>
 
             {/* Right Form */}
-            <div className="space-y-6">
-
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              {/* Name */}
               <div>
                 <label className="block mb-2 text-gray-700">
                   Name
@@ -239,12 +271,17 @@ export default function PartnershipPage() {
 
                 <input
                   type="text"
-                  className="w-full border border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full border text-black border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
                 />
               </div>
 
+              {/* Email & Mobile */}
               <div className="grid md:grid-cols-2 gap-5">
-
+                {/* Email */}
                 <div>
                   <label className="block mb-2 text-gray-700">
                     Email Address
@@ -252,10 +289,15 @@ export default function PartnershipPage() {
 
                   <input
                     type="email"
-                    className="w-full border border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full border text-black border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
                   />
                 </div>
 
+                {/* Mobile */}
                 <div>
                   <label className="block mb-2 text-gray-700">
                     Mobile No.
@@ -263,12 +305,16 @@ export default function PartnershipPage() {
 
                   <input
                     type="text"
-                    className="w-full border border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
+                    name="mobileno"
+                    value={formData.mobileno}
+                    onChange={handleChange}
+                    required
+                    className="w-full border text-black border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
                   />
                 </div>
-
               </div>
 
+              {/* Message */}
               <div>
                 <label className="block mb-2 text-gray-700">
                   Message
@@ -276,18 +322,25 @@ export default function PartnershipPage() {
 
                 <textarea
                   rows={6}
-                  className="w-full border border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full border  text-black border-gray-400 p-4 bg-transparent outline-none focus:border-[#F59E0B]"
                 ></textarea>
               </div>
 
-              <button className="bg-[#F59E0B] hover:bg-[#e68a00] transition text-white px-10 py-4 font-semibold rounded-lg">
-                SUBMIT
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="bg-[#F59E0B] hover:bg-[#e68a00] transition text-white px-10 py-4 font-semibold rounded-lg disabled:opacity-50"
+              >
+                {loading ? "SUBMITTING..." : "SUBMIT"}
               </button>
-
-            </div>
+            </form>
           </div>
         </div>
-
       </section>
 
       {/* FOOTER */}
