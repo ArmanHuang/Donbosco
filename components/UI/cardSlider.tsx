@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 
+// @ts-ignore: side-effect import without type declarations
 import "swiper/css";
 
 type Item = {

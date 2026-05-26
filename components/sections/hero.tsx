@@ -40,7 +40,7 @@ export default function Hero() {
         </p>
 
         <button className="bg-[#F59E0B] hover:bg-[#d97706] transition px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold shadow-lg text-sm md:text-base">
-          Explore More
+          <Link href="/newsevent/3">Explore More</Link>
         </button>
       </div>
 
