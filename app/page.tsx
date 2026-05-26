@@ -9,7 +9,7 @@ import StatsNews from '@/components/sections/statsNews'
 import OurNetwork from '@/components/sections/ourNetwork'
 import NetworkPage from "@/components/sections/network";
 import Footer from '@/components/sections/footer'
-import type { StatsItem } from "@/src/types/statsitem";
+import type { StatsItem } from "@/src/types/";
 
 const statsData: StatsItem[] = [
   { label: "Students",image:"/studentsLogo.png" ,value: 13944 },
