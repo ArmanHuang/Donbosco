@@ -1,4 +1,4 @@
-import { SocialItem } from "@/types/program";
+import { SocialItem } from "@/src/types/program";
 
 export const socialData: SocialItem[] = [
     {

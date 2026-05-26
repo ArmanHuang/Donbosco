@@ -1,5 +1,5 @@
-import { CountryProgram } from "@/types/program"
-import { CenterItem } from "@/types/program";
+import { CountryProgram } from "@/src/types/program"
+import { CenterItem } from "@/src/types/program";
 
 
 export const ourCentersData: Record<string, {

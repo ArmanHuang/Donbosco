@@ -1,4 +1,4 @@
-import { ProgramItem } from "@/types/program";
+import { ProgramItem } from "@/src/types/program";
 
 export default function ProgramCard({ item }: { item: ProgramItem }) {
   return (

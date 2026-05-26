@@ -1,4 +1,4 @@
-import { CountryProgram } from "@/types/program";
+import { CountryProgram } from "@/src/types/program";
 
 export const programsData: Record<string, CountryProgram> = {
   philippines: {
