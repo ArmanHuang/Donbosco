@@ -3,4 +3,5 @@ export type NewsItem = {
     title: string;
     image: string;
     date?: string;
+    description:string;
   };

@@ -44,10 +44,7 @@ export default async function NewsDetailPage({
         </div>
 
         <article className="max-w-none text-gray-700 leading-relaxed space-y-6 text-lg">
-          <p>
-            This activity is part of Don Bosco Tech ASEAN’s commitment to
-            strengthening technical and vocational education across Southeast Asia.
-          </p>
+        <p>{news.description}</p>
         </article>
       </section>
     </main>
