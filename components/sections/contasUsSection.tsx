@@ -5,71 +5,53 @@ import { addRegister } from "@/lib/services/registerService";
 import { addContact } from "@/lib/services/contactService";
 
 export default function ContactPage() {
-
-  const [activeTab, setActiveTab] = useState<
-    "contact" | "registration"
-  >("contact");
+  const [activeTab, setActiveTab] = useState<"contact" | "registration">(
+    "contact"
+  );
 
   return (
     <div className="min-h-screen overflow-hidden">
-
       {/* HERO */}
-      <section className="relative h-[500px] md:h-[700px] w-full">
-
-        {/* BACKGROUND */}
+      <section className="relative h-[260px] sm:h-[360px] md:h-[500px] lg:h-[700px] w-full">
         <img
           src="/contactus-bg.png"
           alt="Hero"
           className="w-full h-full object-cover"
         />
 
-        {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/40"></div>
-
-  
       </section>
 
       {/* MAIN SECTION */}
-      <section className="relative py-24 px-6 overflow-hidden">
-
-        {/* BACKGROUND */}
+      <section className="relative py-14 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-
           <img
             src="/about-partnership.jpg"
-            alt=""
+            alt="Background"
             className="w-full h-full object-cover"
           />
 
           <div className="absolute inset-0 bg-white/85"></div>
-
         </div>
 
-        {/* CONTAINER */}
         <div className="max-w-5xl mx-auto">
-
           {/* TITLE */}
-          <div className="text-center mb-14">
-
-            <h2 className="text-4xl md:text-5xl font-bold text-[#F59E0B] mb-4">
+          <div className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F59E0B] mb-4">
               Get in Touch with Us
             </h2>
 
-            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
-              You are someone who is important to us,
-              so please use this page if you have any
-              questions or needed information.
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
+              You are someone who is important to us, so please use this page if
+              you have any questions or needed information.
             </p>
-
           </div>
 
           {/* TAB BUTTON */}
-          <div className="flex justify-center gap-8 mb-14">
-
-            {/* CONTACT */}
+          <div className="flex justify-center gap-6 sm:gap-8 mb-10 md:mb-14">
             <button
               onClick={() => setActiveTab("contact")}
-              className={`text-lg font-semibold pb-2 border-b-2 transition ${
+              className={`text-base sm:text-lg font-semibold pb-2 border-b-2 transition ${
                 activeTab === "contact"
                   ? "text-[#F59E0B] border-[#F59E0B]"
                   : "text-gray-400 border-transparent"
@@ -78,10 +60,9 @@ export default function ContactPage() {
               Contact Us
             </button>
 
-            {/* REGISTRATION */}
             <button
               onClick={() => setActiveTab("registration")}
-              className={`text-lg font-semibold pb-2 border-b-2 transition ${
+              className={`text-base sm:text-lg font-semibold pb-2 border-b-2 transition ${
                 activeTab === "registration"
                   ? "text-[#F59E0B] border-[#F59E0B]"
                   : "text-gray-400 border-transparent"
@@ -89,34 +70,19 @@ export default function ContactPage() {
             >
               Registration
             </button>
-
           </div>
 
           {/* FORM CARD */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-[30px] shadow-2xl p-8 md:p-12">
-
-            {activeTab === "contact" ? (
-              <ContactForm />
-            ) : (
-              <RegistrationForm />
-            )}
-
+          <div className="bg-white/75 backdrop-blur-sm rounded-2xl md:rounded-[30px] shadow-2xl p-5 sm:p-8 md:p-12">
+            {activeTab === "contact" ? <ContactForm /> : <RegistrationForm />}
           </div>
-
         </div>
-
       </section>
-
     </div>
   );
 }
 
-/* ===================================================== */
-/* CONTACT FORM */
-/* ===================================================== */
-
 function ContactForm() {
-
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -129,31 +95,18 @@ function ContactForm() {
   const [success, setSuccess] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
-
   };
 
-  const handleSubmit = async (
-    e: React.FormEvent
-  ) => {
-
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // VALIDATION
-    if (
-      !form.name ||
-      !form.email ||
-      !form.mobileno ||
-      !form.subject
-    ) {
+    if (!form.name || !form.email || !form.mobileno || !form.subject) {
       alert("Please fill all required fields!");
       return;
     }
@@ -162,12 +115,10 @@ function ContactForm() {
     setSuccess(false);
 
     try {
-
       await addContact(form);
 
       setSuccess(true);
 
-      // RESET
       setForm({
         name: "",
         email: "",
@@ -175,28 +126,17 @@ function ContactForm() {
         subject: "",
         message: "",
       });
-
     } catch (error) {
-
       console.error(error);
-
     } finally {
-
       setLoading(false);
-
     }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-6 text-left text-black"
-    >
-
-      {/* NAME */}
+    <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6 text-left text-black">
       <div>
-
-        <label className="block mb-2 font-medium">
+        <label className="block mb-2 font-medium text-sm sm:text-base">
           Full Name
         </label>
 
@@ -205,18 +145,13 @@ function ContactForm() {
           name="name"
           value={form.name}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+          className="w-full border border-gray-300 bg-white/90 rounded-lg p-3 sm:p-4 outline-none focus:border-[#F59E0B]"
         />
-
       </div>
 
-      {/* EMAIL + MOBILE */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        {/* EMAIL */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <div>
-
-          <label className="block mb-2 font-medium">
+          <label className="block mb-2 font-medium text-sm sm:text-base">
             Email Address
           </label>
 
@@ -226,15 +161,12 @@ function ContactForm() {
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+            className="w-full border border-gray-300 bg-white/90 rounded-lg p-3 sm:p-4 outline-none focus:border-[#F59E0B]"
           />
-
         </div>
 
-        {/* MOBILE */}
         <div>
-
-          <label className="block mb-2 font-medium">
+          <label className="block mb-2 font-medium text-sm sm:text-base">
             Mobile No.
           </label>
 
@@ -243,17 +175,13 @@ function ContactForm() {
             name="mobileno"
             value={form.mobileno}
             onChange={handleChange}
-            className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+            className="w-full border border-gray-300 bg-white/90 rounded-lg p-3 sm:p-4 outline-none focus:border-[#F59E0B]"
           />
-
         </div>
-
       </div>
 
-      {/* SUBJECT */}
       <div>
-
-        <label className="block mb-2 font-medium">
+        <label className="block mb-2 font-medium text-sm sm:text-base">
           Subject
         </label>
 
@@ -262,15 +190,12 @@ function ContactForm() {
           name="subject"
           value={form.subject}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+          className="w-full border border-gray-300 bg-white/90 rounded-lg p-3 sm:p-4 outline-none focus:border-[#F59E0B]"
         />
-
       </div>
 
-      {/* MESSAGE */}
       <div>
-
-        <label className="block mb-2 font-medium">
+        <label className="block mb-2 font-medium text-sm sm:text-base">
           Message
         </label>
 
@@ -279,41 +204,30 @@ function ContactForm() {
           name="message"
           value={form.message}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none resize-none focus:border-[#F59E0B]"
+          className="w-full border border-gray-300 bg-white/90 rounded-lg p-3 sm:p-4 outline-none resize-none focus:border-[#F59E0B]"
         />
-
       </div>
 
-      {/* BUTTON */}
-      <div className="text-center pt-4">
-
+      <div className="text-center pt-3 md:pt-4">
         <button
           type="submit"
           disabled={loading}
-          className="bg-[#F59E0B] hover:bg-[#d97706] text-white px-10 py-4 rounded-xl transition shadow-lg"
+          className="w-full sm:w-auto bg-[#F59E0B] hover:bg-[#d97706] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-xl transition shadow-lg disabled:opacity-50"
         >
           {loading ? "Sending..." : "Submit Message"}
         </button>
-
       </div>
 
-      {/* SUCCESS */}
       {success && (
-        <p className="text-green-600 text-center">
+        <p className="text-green-600 text-center text-sm sm:text-base">
           ✅ Message sent successfully!
         </p>
       )}
-
     </form>
   );
 }
 
-/* ===================================================== */
-/* REGISTRATION FORM */
-/* ===================================================== */
-
 function RegistrationForm() {
-
   const [form, setForm] = useState({
     fullname: "",
     lastEducation: "",
@@ -330,26 +244,18 @@ function RegistrationForm() {
 
   const handleChange = (
     e: React.ChangeEvent<
-      HTMLInputElement |
-      HTMLTextAreaElement |
-      HTMLSelectElement
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
-
   };
 
-  const handleSubmit = async (
-    e: React.FormEvent
-  ) => {
-
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // VALIDATION
     if (
       !form.fullname ||
       !form.lastEducation ||
@@ -367,7 +273,6 @@ function RegistrationForm() {
     setSuccess(false);
 
     try {
-
       await addRegister({
         name: form.fullname,
         email: form.email,
@@ -378,7 +283,6 @@ function RegistrationForm() {
 
       setSuccess(true);
 
-      // RESET
       setForm({
         fullname: "",
         lastEducation: "",
@@ -389,31 +293,21 @@ function RegistrationForm() {
         program: "",
         message: "",
       });
-
     } catch (error) {
-
       console.error(error);
-
     } finally {
-
       setLoading(false);
-
     }
   };
 
+  const inputClass =
+    "w-full border border-gray-300 bg-white/90 rounded-lg p-3 sm:p-4 outline-none focus:border-[#F59E0B]";
+
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-6 text-left text-black"
-    >
-
-      {/* ROW 1 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        {/* FULL NAME */}
+    <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6 text-left text-black">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <div>
-
-          <label className="block mb-2 font-medium">
+          <label className="block mb-2 font-medium text-sm sm:text-base">
             Full Name
           </label>
 
@@ -422,15 +316,12 @@ function RegistrationForm() {
             name="fullname"
             value={form.fullname}
             onChange={handleChange}
-            className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+            className={inputClass}
           />
-
         </div>
 
-        {/* LAST EDUCATION */}
         <div>
-
-          <label className="block mb-2 font-medium">
+          <label className="block mb-2 font-medium text-sm sm:text-base">
             Last Education
           </label>
 
@@ -439,39 +330,19 @@ function RegistrationForm() {
             name="lastEducation"
             value={form.lastEducation}
             onChange={handleChange}
-            className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+            className={inputClass}
           >
-
-            <option value="">
-              Select Education
-            </option>
-
-            <option value="High School">
-              High School
-            </option>
-
-            <option value="Diploma">
-              Diploma
-            </option>
-
-            <option value="Bachelor Degree">
-              Bachelor Degree
-            </option>
-
-            <option value="Master Degree">
-              Master Degree
-            </option>
-
+            <option value="">Select Education</option>
+            <option value="High School">High School</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Bachelor Degree">Bachelor Degree</option>
+            <option value="Master Degree">Master Degree</option>
           </select>
-
         </div>
-
       </div>
 
-      {/* ADDRESS */}
       <div>
-
-        <label className="block mb-2 font-medium">
+        <label className="block mb-2 font-medium text-sm sm:text-base">
           Address
         </label>
 
@@ -480,18 +351,13 @@ function RegistrationForm() {
           name="address"
           value={form.address}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+          className={inputClass}
         />
-
       </div>
 
-      {/* ROW 2 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        {/* EMAIL */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <div>
-
-          <label className="block mb-2 font-medium">
+          <label className="block mb-2 font-medium text-sm sm:text-base">
             Email Address
           </label>
 
@@ -501,15 +367,12 @@ function RegistrationForm() {
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+            className={inputClass}
           />
-
         </div>
 
-        {/* MOBILE */}
         <div>
-
-          <label className="block mb-2 font-medium">
+          <label className="block mb-2 font-medium text-sm sm:text-base">
             Mobile No.
           </label>
 
@@ -518,17 +381,13 @@ function RegistrationForm() {
             name="mobileno"
             value={form.mobileno}
             onChange={handleChange}
-            className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+            className={inputClass}
           />
-
         </div>
-
       </div>
 
-      {/* COUNTRY */}
       <div>
-
-        <label className="block mb-2 font-medium">
+        <label className="block mb-2 font-medium text-sm sm:text-base">
           Country
         </label>
 
@@ -537,41 +396,19 @@ function RegistrationForm() {
           name="country"
           value={form.country}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+          className={inputClass}
         >
-
-          <option value="">
-            Select Country
-          </option>
-
-          <option value="Indonesia">
-            Indonesia
-          </option>
-
-          <option value="Philippines">
-            Philippines
-          </option>
-
-          <option value="Thailand">
-            Thailand
-          </option>
-
-          <option value="Vietnam">
-            Vietnam
-          </option>
-
-          <option value="Cambodia">
-            Cambodia
-          </option>
-
+          <option value="">Select Country</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Philippines">Philippines</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Cambodia">Cambodia</option>
         </select>
-
       </div>
 
-      {/* PROGRAM */}
       <div>
-
-        <label className="block mb-2 font-medium">
+        <label className="block mb-2 font-medium text-sm sm:text-base">
           Program
         </label>
 
@@ -580,33 +417,17 @@ function RegistrationForm() {
           name="program"
           value={form.program}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none focus:border-[#F59E0B]"
+          className={inputClass}
         >
-
-          <option value="">
-            Select Program
-          </option>
-
-          <option value="First Choice">
-            First Choice
-          </option>
-
-          <option value="Second Choice">
-            Second Choice
-          </option>
-
-          <option value="Third Choice">
-            Third Choice
-          </option>
-
+          <option value="">Select Program</option>
+          <option value="First Choice">First Choice</option>
+          <option value="Second Choice">Second Choice</option>
+          <option value="Third Choice">Third Choice</option>
         </select>
-
       </div>
 
-      {/* MESSAGE */}
       <div>
-
-        <label className="block mb-2 font-medium">
+        <label className="block mb-2 font-medium text-sm sm:text-base">
           Message
         </label>
 
@@ -615,31 +436,25 @@ function RegistrationForm() {
           name="message"
           value={form.message}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-white/90 rounded-lg p-4 outline-none resize-none focus:border-[#F59E0B]"
+          className="w-full border border-gray-300 bg-white/90 rounded-lg p-3 sm:p-4 outline-none resize-none focus:border-[#F59E0B]"
         />
-
       </div>
 
-      {/* BUTTON */}
-      <div className="text-center pt-4">
-
+      <div className="text-center pt-3 md:pt-4">
         <button
           type="submit"
           disabled={loading}
-          className="bg-[#F59E0B] hover:bg-[#d97706] text-white px-10 py-4 rounded-xl transition shadow-lg"
+          className="w-full sm:w-auto bg-[#F59E0B] hover:bg-[#d97706] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-xl transition shadow-lg disabled:opacity-50"
         >
           {loading ? "Sending..." : "Submit Registration"}
         </button>
-
       </div>
 
-      {/* SUCCESS */}
       {success && (
-        <p className="text-green-600 text-center">
+        <p className="text-green-600 text-center text-sm sm:text-base">
           Registration submitted successfully!
         </p>
       )}
-
     </form>
   );
 }

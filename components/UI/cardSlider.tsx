@@ -7,7 +7,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 
-// @ts-ignore
 import "swiper/css";
 
 type Item = {
@@ -36,8 +35,7 @@ export default function CardSlider({ data }: Props) {
   const grouped = chunkData(data, 3);
 
   return (
-    <div className="relative">
-      {/* SWIPER */}
+    <div className="relative w-full">
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -46,26 +44,24 @@ export default function CardSlider({ data }: Props) {
       >
         {grouped.map((group, index) => (
           <SwiperSlide key={index}>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {group.map((item) => (
                 <Link
                   href={`/newsevent/${item.id}`}
                   key={item.id}
                   className="text-center block group"
                 >
-                  {/* IMAGE */}
-                  <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <div className="relative w-full h-[200px] sm:h-[180px] md:h-48 mb-4 rounded-lg overflow-hidden bg-gray-100">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition duration-300"
                     />
                   </div>
 
-                  {/* TITLE */}
-                  <p className="text-blue-950 font-medium group-hover:text-[#F59E0B] transition">
+                  <p className="text-blue-950 font-medium text-sm sm:text-base group-hover:text-[#F59E0B] transition">
                     {item.title}
                   </p>
                 </Link>
@@ -75,18 +71,18 @@ export default function CardSlider({ data }: Props) {
         ))}
       </Swiper>
 
-      {/* PREV BUTTON */}
       <button
+        type="button"
         onClick={() => swiperRef.current?.slidePrev()}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-50 bg-orange-400 hover:bg-orange-500 transition text-white p-3 rounded-full shadow"
+        className="absolute left-[-14px] md:left-2 top-1/2 -translate-y-1/2 z-50 bg-orange-400 hover:bg-orange-500 transition text-white w-10 h-10 md:w-12 md:h-12 rounded-full shadow"
       >
         ←
       </button>
 
-      {/* NEXT BUTTON */}
       <button
+        type="button"
         onClick={() => swiperRef.current?.slideNext()}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-50 bg-orange-400 hover:bg-orange-500 transition text-white p-3 rounded-full shadow"
+        className="absolute right-[-14px] md:right-2 top-1/2 -translate-y-1/2 z-50 bg-orange-400 hover:bg-orange-500 transition text-white w-10 h-10 md:w-12 md:h-12 rounded-full shadow"
       >
         →
       </button>
