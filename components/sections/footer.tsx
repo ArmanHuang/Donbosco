@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
+import Logodonbosco from "@/assets/images/donboscologo.png";
 
 export default function Footer() {
   return (
@@ -54,27 +56,38 @@ export default function Footer() {
             {/* LOGOS */}
             <div className="flex items-center gap-4 mb-4">
 
-              <Image
-                src="/donboscologo.png"
-                alt="Logo"
-                width={140}
-                height={140}
-                className="w-32 md:w-40 h-auto object-contain"
-              />
+              <Link href="/" className="flex items-center gap-3">
+                <Image
+                  src={Logodonbosco}
+                  alt="Don Bosco TVET Timor-Leste"
+                  width={35}
+                  height={35}
+                  className="object-contain"
+                />
+
+                <div className="flex flex-col">
+                  <h1 className="text-base md:text-md font-bold text-black leading-tight">
+                    DON BOSCO TVET
+                  </h1>
+                  <p className="text-sm md:text-base font-semibold text-black leading-tight">
+                    TIMOR-LESTE
+                  </p>
+                </div>
+              </Link>
 
               <Image
                 src="/footerImage.png"
                 alt="Footer"
-                width={220}
-                height={120}
-                className="w-36 md:w-48 h-auto object-contain"
+                width={300}
+                height={300}
+                className="w-46 md:w-48 h-auto object-contain"
               />
 
             </div>
 
             {/* FOLLOW */}
             <p className="text-black text-sm mb-3">
-              Follow us ON
+              Follow us On
             </p>
 
             {/* SOCIAL */}
@@ -116,8 +129,8 @@ export default function Footer() {
                 <Image
                   src="/x.png"
                   alt="X"
-                  width={32}
-                  height={32}
+                  width={50}
+                  height={50}
                   className="hover:scale-110 transition"
                 />
               </a>
@@ -130,8 +143,8 @@ export default function Footer() {
                 <Image
                   src="/linkedin.png"
                   alt="LinkedIn"
-                  width={32}
-                  height={32}
+                  width={40}
+                  height={40}
                   className="hover:scale-110 transition"
                 />
               </a>
