@@ -1,17 +1,17 @@
-import Header from "@/components/UI/header"
-import OurProgramHero from '@/components/sections/ourProgramHero'
-import Footer from "@/components/sections/footer"
+import Header from "@/components/UI/header";
+import Footer from "@/components/sections/footer";
+import OurProgramsHero from "@/components/sections/ourProgramHero";
 
-export default async function Page(){
-    return(
-        <div>
-            <Header></Header>
-            <OurProgramHero></OurProgramHero>
-            <Footer></Footer>
-
-
-        </div>
-
-    )
-   
+export default function Page({
+  params,
+}: {
+  params: { country: string };
+}) {
+  return (
+    <>
+      <Header />
+      <OurProgramsHero defaultCountry={params.country} />
+      <Footer />
+    </>
+  );
 }

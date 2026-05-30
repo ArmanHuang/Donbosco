@@ -3,55 +3,44 @@
 import { useState, useEffect } from "react";
 import ProgramSection from "@/components/sections/programSection";
 
-export default function OurProgramsHero() {
-  const [country, setCountry] = useState("");
+export default function OurProgramsHero({
+  defaultCountry = "",
+}: {
+  defaultCountry?: string;
+}) {
+  const country = defaultCountry;
+
   const [selectedData, setSelectedData] = useState<any>(null);
   const [selectedCenter, setSelectedCenter] = useState<any>(null);
 
   useEffect(() => {
     if (!country) return;
 
-    let ignore = false;
-
     const fetchData = async () => {
       try {
         const res = await fetch(`/api/programs/${country}`);
-
-        if (!res.ok) {
-          setSelectedData(null);
-          return;
-        }
-
         const data = await res.json();
-        if (!ignore) setSelectedData(data);
+
+        setSelectedData(data);
 
         const resCenter = await fetch(`/api/centers/${country}`);
 
         if (resCenter.ok) {
           const centerData = await resCenter.json();
-          if (!ignore) setSelectedCenter(centerData?.centers?.[0] ?? null);
-        } else {
-          if (!ignore) setSelectedCenter(null);
+          setSelectedCenter(centerData?.centers?.[0] ?? null);
         }
       } catch (error) {
         console.error(error);
-        if (!ignore) {
-          setSelectedData(null);
-          setSelectedCenter(null);
-        }
+        setSelectedData(null);
+        setSelectedCenter(null);
       }
     };
 
     fetchData();
-
-    return () => {
-      ignore = true;
-    };
   }, [country]);
-
+  
   return (
     <main className="min-h-screen bg-white overflow-hidden">
-      {/* Banner */}
       <section className="relative w-full h-[260px] sm:h-[330px] md:h-[400px] mt-16 md:mt-20">
         <img
           src="/ourProgramBackground.png"
@@ -71,7 +60,6 @@ export default function OurProgramsHero() {
         </div>
       </section>
 
-      {/* Content */}
       <section className="py-10 md:py-12 px-6 sm:px-10 md:px-20 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-[#F59E0B]">
           Our Programs
@@ -83,30 +71,10 @@ export default function OurProgramsHero() {
           knowledge they need to build brighter futures.
         </p>
 
-        {/* Select Country */}
-        <div className="mt-10 flex justify-center md:justify-end">
-          <select
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            className="w-full sm:w-auto border border-orange-400 rounded-full px-6 py-3 text-slate-950 bg-white focus:outline-none"
-          >
-            <option value="">Select Country</option>
-            <option value="philippines">Philippines</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="cambodia">Cambodia</option>
-            <option value="timorleste">Timor Leste</option>
-            <option value="thailand">Thailand</option>
-            <option value="laos">Laos</option>
-            <option value="myanmar">Myanmar</option>
-            <option value="vietnam">Vietnam</option>
-          </select>
-        </div>
       </section>
 
-      {/* Program Section */}
       {selectedData && <ProgramSection data={selectedData} />}
 
-      {/* OUR CENTERS */}
       {selectedCenter && (
         <section className="px-6 sm:px-10 md:px-20 py-12 md:py-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#F59E0B] mb-6 text-center">
@@ -119,7 +87,6 @@ export default function OurProgramsHero() {
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
-            {/* LEFT */}
             <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
               <ul className="list-disc pl-5 space-y-3 text-left">
                 {selectedCenter.schools.map((school: string, i: number) => (
@@ -133,7 +100,6 @@ export default function OurProgramsHero() {
               </ul>
             </div>
 
-            {/* RIGHT */}
             <div className="border rounded-2xl overflow-hidden h-[260px] sm:h-[340px] md:h-96 shadow-md bg-white">
               <img
                 src={selectedCenter.image}

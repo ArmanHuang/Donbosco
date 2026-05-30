@@ -1,35 +1,19 @@
 import Header from "@/components/UI/header";
 import Footer from "@/components/sections/footer";
-import ProgramSection from "@/components/sections/programSection";
-
-async function getPrograms(country: string) {
-  const res = await fetch(
-    `http://localhost:3000/api/programs/${country}`,
-    { cache: "no-store" }
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch");
-  }
-
-  return res.json();
-}
+import OurProgramsHero from "@/components/sections/ourProgramHero";
 
 export default async function Page({
   params,
 }: {
-  params: { country: string };
+  params: Promise<{ country: string }>;
 }) {
-  const data = await getPrograms(params.country);
+  const { country } = await params;
 
   return (
-    <div>
+    <>
       <Header />
-
-      {/* 🔥 LANGSUNG PAKE SECTION */}
-      <ProgramSection data={data} />
-
+      <OurProgramsHero defaultCountry={country} />
       <Footer />
-    </div>
+    </>
   );
 }
