@@ -24,7 +24,8 @@ export default function AboutUs() {
           </h1>
 
           <p className="text-gray-700 mb-4 leading-relaxed text-base text-justify">
-            Don Bosco Tech ASEAN is a network of seven (+1) ASEAN countries to
+            DON BOSCO
+TVET TIMOR-LESTE is a network of seven (+1) ASEAN countries to
             build common understanding and effective communication in efforts
             to contribute to fighting poverty and improving the quality of
             marginalized young people through the development of TVET
@@ -32,7 +33,8 @@ export default function AboutUs() {
           </p>
 
           <p className="text-gray-700 mb-4 leading-relaxed text-base text-justify">
-            Don Bosco Tech ASEAN has played an active role in developing 36
+            DON BOSCO
+TVET TIMOR-LESTE has played an active role in developing 36
             TVET centers with a total of around 9,000 students who are
             accompanied by around 800 qualified and certified trainers and
             staffs. All of it spread in 7 (+1) ASEAN countries. Our project

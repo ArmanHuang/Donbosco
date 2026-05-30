@@ -31,7 +31,8 @@ export default function Footer() {
               max-w-3xl
             "
           >
-            Together and united the Salesians in the Don Bosco Tech ASEAN
+            Together and united the Salesians in the DON BOSCO
+TVET TIMOR-LESTE
             network serve to develop marginalized youth people through training
             centers
           </h2>

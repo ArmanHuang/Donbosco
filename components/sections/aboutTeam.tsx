@@ -44,12 +44,14 @@ export default function AboutTeam() {
     },
     {
       name: "Mark Carlos Tito Gumapon",
-      role: "Don Bosco Tech ASEAN Central Office Managing Director",
+      role: "DON BOSCO
+TVET TIMOR-LESTE Central Office Managing Director",
       img: "/mark.png",
     },
     {
       name: "John Nicollo Oviedo",
-      role: "Don Bosco Tech ASEAN Central Office Admin Assistant",
+      role: "DON BOSCO
+TVET TIMOR-LESTE Central Office Admin Assistant",
       img: "/john.png",
     },
   ];
@@ -81,11 +83,13 @@ export default function AboutTeam() {
 
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F59E0B] mb-6">
-            Don Bosco Tech ASEAN Today
+            DON BOSCO
+TVET TIMOR-LESTE Today
           </h1>
 
           <p className="text-gray-700 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mb-10 md:mb-16">
-            Don Bosco Tech ASEAN is a regional network formed through a
+            DON BOSCO
+TVET TIMOR-LESTE is a regional network formed through a
             development initiative launched in 2018 in partnership with Don
             Bosco Mondo, Germany. The initiative focuses on enhancing vocational
             training across seven (+1) ASEAN countries.
@@ -173,7 +177,8 @@ export default function AboutTeam() {
             Our Team
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mt-12 md:mt-14">
-            Meet the people behind Don Bosco Tech ASEAN. Our team brings
+            Meet the people behind DON BOSCO
+TVET TIMOR-LESTE. Our team brings
             together diverse expertise and a shared commitment to empowering
             youth through quality vocational education and training across the
             ASEAN region.

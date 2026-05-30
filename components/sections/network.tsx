@@ -26,7 +26,8 @@ export default function NetworkPage() {
           </h1>
 
           <p className="max-w-xl text-white text-base md:text-lg leading-relaxed mb-8 text-justify">
-            Don Bosco Tech ASEAN’s innovative and holistic technical and
+            DON BOSCO
+TVET TIMOR-LESTE’s innovative and holistic technical and
             vocational education and training gives youth the skills and
             information they need to succeed in today’s world. Don Bosco Tech
             prepares young people to be productive and responsible citizens,

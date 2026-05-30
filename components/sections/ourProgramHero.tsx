@@ -66,7 +66,8 @@ export default function OurProgramsHero({
         </h2>
 
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
-          Don Bosco Tech ASEAN offers a diverse range of quality vocational
+          DON BOSCO
+TVET TIMOR-LESTE offers a diverse range of quality vocational
           training programs designed to equip young people with the skills and
           knowledge they need to build brighter futures.
         </p>
@@ -82,7 +83,8 @@ export default function OurProgramsHero({
           </h2>
 
           <h4 className="mb-10 text-center text-slate-950 text-base max-w-3xl mx-auto leading-relaxed">
-            Across 8 countries, Don Bosco Tech ASEAN empowers youth through
+            Across 8 countries, DON BOSCO
+TVET TIMOR-LESTE empowers youth through
             quality vocational training in diverse communities.
           </h4>
 

@@ -3,11 +3,13 @@ import { NewsItem } from "@/src/types/news";
 export const newsData: NewsItem[] = [
   {
     id: 1,
-    title: "Don Bosco Tech ASEAN Annual Meeting 2025",
+    title: "DON BOSCO
+TVET TIMOR-LESTE Annual Meeting 2025",
     image: "/newsImage1.png",
     date: "Apr 4, 2025",
     description:
-      "The Don Bosco Tech ASEAN Annual Meeting 2025 gathered representatives from across Southeast Asia to strengthen collaboration in technical and vocational education and training (TVET). The meeting focused on innovation, sustainability, youth empowerment, and regional partnerships to enhance the future of vocational education.",
+      "The DON BOSCO
+TVET TIMOR-LESTE Annual Meeting 2025 gathered representatives from across Southeast Asia to strengthen collaboration in technical and vocational education and training (TVET). The meeting focused on innovation, sustainability, youth empowerment, and regional partnerships to enhance the future of vocational education.",
   },
 
   {
@@ -17,7 +19,8 @@ export const newsData: NewsItem[] = [
     image: "/newsImage2.png",
     date: "Nov 8, 2024",
     description:
-      "Don Bosco Tech ASEAN continues its mission to elevate technical education standards across the ASEAN region by promoting quality training, international cooperation, and industry-relevant skills development for young people.",
+      "DON BOSCO
+TVET TIMOR-LESTE continues its mission to elevate technical education standards across the ASEAN region by promoting quality training, international cooperation, and industry-relevant skills development for young people.",
   },
 
   {
@@ -63,7 +66,8 @@ export const newsData: NewsItem[] = [
   {
     id: 7,
     title:
-      "Don Bosco Tech ASEAN Thailand and Timor-Leste Benchmarking and Memorandum of Understanding Signing Activity",
+      "DON BOSCO
+TVET TIMOR-LESTE Thailand and Timor-Leste Benchmarking and Memorandum of Understanding Signing Activity",
     image: "/news-7.jpg",
     date: "Sep 10, 2024",
     description:
@@ -72,7 +76,8 @@ export const newsData: NewsItem[] = [
 
   {
     id: 8,
-    title: "Don Bosco Tech ASEAN 2nd Bi-Annual Meeting 2023",
+    title: "DON BOSCO
+TVET TIMOR-LESTE 2nd Bi-Annual Meeting 2023",
     image: "/news-8.jpg",
     date: "Sep 10, 2024",
     description:

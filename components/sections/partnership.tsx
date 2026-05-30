@@ -121,7 +121,8 @@ export default function PartnershipPage() {
               </h1>
 
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Don Bosco Tech ASEAN collaborates with industries,
+                DON BOSCO
+TVET TIMOR-LESTE collaborates with industries,
                 institutions, and organizations to strengthen
                 vocational education and empower future technical
                 leaders across ASEAN.
@@ -166,7 +167,8 @@ export default function PartnershipPage() {
             </h2>
 
             <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed mb-20">
-              Don Bosco Tech ASEAN pays close attention to
+              DON BOSCO
+TVET TIMOR-LESTE pays close attention to
               establishing effective, efficient, productive,
               and valuable networking with local and
               international institutions.

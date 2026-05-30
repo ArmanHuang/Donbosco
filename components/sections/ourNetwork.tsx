@@ -27,7 +27,8 @@ export default function NetworkPage() {
           </h2>
 
           <p className="text-base text-black leading-relaxed max-w-xl mx-auto md:mx-0">
-            Don Bosco Tech ASEAN is a network of ASEAN countries in 7 (+1)
+            DON BOSCO
+TVET TIMOR-LESTE is a network of ASEAN countries in 7 (+1)
             consisting of the Philippines, Indonesia, Thailand, Vietnam,
             Cambodia, Myanmar, Laos, and Timor-Leste.
           </p>
@@ -44,7 +45,8 @@ export default function NetworkPage() {
 
           {/* Description */}
           <p className="text-gray-700 text-base leading-relaxed mb-10 max-w-3xl mx-auto">
-            As an international network, Don Bosco Tech ASEAN pays close
+            As an international network, DON BOSCO
+TVET TIMOR-LESTE pays close
             attention to establishing effective, efficient, useful, productive,
             and valuable networking with local and international institutions.
           </p>
