@@ -48,8 +48,8 @@ export default function Hero() {
 
       {/* CONTENT */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-20 pb-56 sm:pb-60 md:pb-32">
-        <p className="text-[#F59E0B] font-semibold text-lg sm:text-2xl md:text-4xl mb-3">
-          Don Bosco Tech ASEAN
+        <p className="text-[#F59E0B] font-bold text-lg sm:text-2xl md:text-4xl mb-3">
+          DON BOSCO TVET TIMOR-LESTE
         </p>
 
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-5 md:mb-6">
