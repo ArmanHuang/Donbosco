@@ -61,8 +61,8 @@ TVET TIMOR-LESTE
                 <Image
                   src={Logodonbosco}
                   alt="Don Bosco TVET Timor-Leste"
-                  width={35}
-                  height={35}
+                  width={60}
+                  height={60}
                   className="object-contain"
                 />
 
@@ -79,8 +79,8 @@ TVET TIMOR-LESTE
               <Image
                 src="/footerImage.png"
                 alt="Footer"
-                width={300}
-                height={300}
+                width={400}
+                height={400}
                 className="w-46 md:w-48 h-auto object-contain"
               />
 
