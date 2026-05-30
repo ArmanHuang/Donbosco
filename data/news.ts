@@ -3,24 +3,21 @@ import { NewsItem } from "@/src/types/news";
 export const newsData: NewsItem[] = [
   {
     id: 1,
-    title: "DON BOSCO
-TVET TIMOR-LESTE Annual Meeting 2025",
+    title: "DON BOSCO TVET TIMOR-LESTE Annual Meeting 2025",
     image: "/newsImage1.png",
     date: "Apr 4, 2025",
     description:
-      "The DON BOSCO
-TVET TIMOR-LESTE Annual Meeting 2025 gathered representatives from across Southeast Asia to strengthen collaboration in technical and vocational education and training (TVET). The meeting focused on innovation, sustainability, youth empowerment, and regional partnerships to enhance the future of vocational education.",
+      "The DON BOSCO TVET TIMOR-LESTE Annual Meeting 2025 gathered representatives from across Southeast Asia to strengthen collaboration in technical and vocational education and training (TVET). The meeting focused on innovation, sustainability, youth empowerment, and regional partnerships to enhance the future of vocational education.",
   },
 
   {
     id: 2,
     title:
-      "𝐃𝐨𝐧 𝐁𝐨𝐬𝐜𝐨 𝐓𝐞𝐜𝐡 𝐀𝐒𝐄𝐀𝐍: 𝐄𝐥𝐞𝐯𝐚𝐭𝐢𝐧𝐠 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧 𝐢𝐧 𝐭𝐡𝐞 𝐑𝐞𝐠𝐢𝐨𝐧",
+      "DON BOSCO TVET TIMOR-LESTE 𝐄𝐥𝐞𝐯𝐚𝐭𝐢𝐧𝐠 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧 𝐢𝐧 𝐭𝐡𝐞 𝐑𝐞𝐠𝐢𝐨𝐧",
     image: "/newsImage2.png",
     date: "Nov 8, 2024",
     description:
-      "DON BOSCO
-TVET TIMOR-LESTE continues its mission to elevate technical education standards across the ASEAN region by promoting quality training, international cooperation, and industry-relevant skills development for young people.",
+      "DON BOSCO TVET TIMOR-LESTE continues its mission to elevate technical education standards across the ASEAN region by promoting quality training, international cooperation, and industry-relevant skills development for young people.",
   },
 
   {
@@ -66,8 +63,7 @@ TVET TIMOR-LESTE continues its mission to elevate technical education standards 
   {
     id: 7,
     title:
-      "DON BOSCO
-TVET TIMOR-LESTE Thailand and Timor-Leste Benchmarking and Memorandum of Understanding Signing Activity",
+      "DON BOSCO TVET TIMOR-LESTE Thailand and Timor-Leste Benchmarking and Memorandum of Understanding Signing Activity",
     image: "/news-7.jpg",
     date: "Sep 10, 2024",
     description:
@@ -76,8 +72,7 @@ TVET TIMOR-LESTE Thailand and Timor-Leste Benchmarking and Memorandum of Underst
 
   {
     id: 8,
-    title: "DON BOSCO
-TVET TIMOR-LESTE 2nd Bi-Annual Meeting 2023",
+    title: "DON BOSCO TVET TIMOR-LESTE 2nd Bi-Annual Meeting 2023",
     image: "/news-8.jpg",
     date: "Sep 10, 2024",
     description:
