@@ -34,14 +34,23 @@ export default function Header() {
       <div className="flex items-center justify-between px-6 md:px-10 py-4">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <Link href="/" className="block">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src={Logodonbosco}
-              alt="Don Bosco Tech ASEAN"
-              width={140}
-              height={140}
+              alt="Don Bosco TVET Timor-Leste"
+              width={40}
+              height={40}
               className="object-contain"
             />
+
+            <div className="hidden md:flex flex-col">
+              <h1 className="text-base lg:text-lg font-bold text-black leading-tight">
+                DON BOSCO TVET
+              </h1>
+              <p className="text-sm lg:text-base font-bold text-black leading-tight">
+                TIMOR-LESTE
+              </p>
+            </div>
           </Link>
         </div>
 
