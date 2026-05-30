@@ -25,7 +25,7 @@ export default function NetworkPage() {
             Don Bosco Tech Building Youth’s Future
           </h1>
 
-          <p className="max-w-xl text-white text-sm sm:text-base md:text-lg leading-relaxed mb-8">
+          <p className="max-w-xl text-white text-base md:text-lg leading-relaxed mb-8">
             Don Bosco Tech ASEAN’s innovative and holistic technical and
             vocational education and training gives youth the skills and
             information they need to succeed in today’s world. Don Bosco Tech
@@ -35,7 +35,7 @@ export default function NetworkPage() {
 
           <Link
             href="/programs"
-            className="inline-flex bg-orange-500 hover:bg-orange-600 transition text-white px-6 py-3 rounded-xl font-semibold shadow-lg text-sm sm:text-base"
+            className="inline-flex bg-orange-500 hover:bg-orange-600 transition text-white px-6 py-3 rounded-xl font-semibold shadow-lg text-base"
           >
             Explore More
           </Link>

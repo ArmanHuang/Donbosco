@@ -172,7 +172,12 @@ export default function AboutTeam() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F59E0B] mb-10 md:mb-16">
             Our Team
           </h2>
-
+          <p className="text-gray-700 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mt-12 md:mt-14">
+            Meet the people behind Don Bosco Tech ASEAN. Our team brings
+            together diverse expertise and a shared commitment to empowering
+            youth through quality vocational education and training across the
+            ASEAN region.
+          </p>
           {/* MOBILE: LIST CARD */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:hidden">
             {teamMembers.map((member, i) => (
@@ -252,12 +257,7 @@ export default function AboutTeam() {
             </div>
           </div>
 
-          <p className="text-gray-700 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mt-12 md:mt-14">
-            Meet the people behind Don Bosco Tech ASEAN. Our team brings
-            together diverse expertise and a shared commitment to empowering
-            youth through quality vocational education and training across the
-            ASEAN region.
-          </p>
+          
         </div>
       </section>
     </main>

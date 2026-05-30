@@ -42,7 +42,7 @@ export default function NewsSection() {
         </h2>
 
         {/* Subtitle */}
-        <p className="text-gray-700 max-w-3xl mx-auto mb-8 md:mb-10 text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-700 max-w-3xl mx-auto mb-8 md:mb-10 text-base leading-relaxed">
           Stay connected with us through our latest news and events. Explore our
           journey, achievements, and activities that inspire and bring our
           community together.
@@ -51,7 +51,7 @@ export default function NewsSection() {
         {/* Card */}
         <div className="max-w-[1200px] w-full mx-auto bg-white rounded-2xl shadow-xl p-5 sm:p-8 md:p-10 lg:p-12 min-h-[360px] md:min-h-[442px]">
           {loading && (
-            <p className="text-gray-500 text-sm sm:text-base">
+            <p className="text-gray-500 text-base">
               Loading news...
             </p>
           )}
@@ -59,7 +59,7 @@ export default function NewsSection() {
           {!loading && news.length > 0 && <CardSlider data={news} />}
 
           {!loading && news.length === 0 && (
-            <p className="text-gray-500 text-sm sm:text-base">
+            <p className="text-gray-500 text-base">
               No news available
             </p>
           )}

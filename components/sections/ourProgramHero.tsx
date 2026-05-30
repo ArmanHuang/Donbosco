@@ -53,7 +53,7 @@ export default function OurProgramsHero({
             Our Programs
           </h1>
 
-          <p className="text-white mt-3 max-w-xl text-sm sm:text-base leading-relaxed">
+          <p className="text-white mt-3 max-w-xl text-base leading-relaxed">
             Transforming lives and fostering brighter futures, we equip young
             people with the skills they need to succeed.
           </p>
@@ -65,7 +65,7 @@ export default function OurProgramsHero({
           Our Programs
         </h2>
 
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
           Don Bosco Tech ASEAN offers a diverse range of quality vocational
           training programs designed to equip young people with the skills and
           knowledge they need to build brighter futures.
@@ -81,18 +81,18 @@ export default function OurProgramsHero({
             Our Centers
           </h2>
 
-          <h4 className="mb-10 text-center text-slate-950 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+          <h4 className="mb-10 text-center text-slate-950 text-base max-w-3xl mx-auto leading-relaxed">
             Across 8 countries, Don Bosco Tech ASEAN empowers youth through
             quality vocational training in diverse communities.
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
-            <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+            <div className="p-6 md:p-8">
               <ul className="list-disc pl-5 space-y-3 text-left">
                 {selectedCenter.schools.map((school: string, i: number) => (
                   <li
                     key={i}
-                    className="hover:underline cursor-pointer text-slate-950 text-sm sm:text-base leading-relaxed"
+                    className="hover:underline cursor-pointer text-slate-950 text-base leading-relaxed"
                   >
                     {school}
                   </li>
@@ -100,7 +100,7 @@ export default function OurProgramsHero({
               </ul>
             </div>
 
-            <div className="border rounded-2xl overflow-hidden h-[260px] sm:h-[340px] md:h-96 shadow-md bg-white">
+            <div className="rounded-2xl overflow-hidden md:h-96">
               <img
                 src={selectedCenter.image}
                 alt="Map"

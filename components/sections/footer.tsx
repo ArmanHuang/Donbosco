@@ -142,7 +142,7 @@ export default function Footer() {
           {/* COPYRIGHT */}
           <div className="md:self-end">
             <p className="text-xs text-gray-700">
-              Copyright © {new Date().getFullYear()} Don Bosco Tech ASEAN.
+              Copyright © {new Date().getFullYear()} DON BOSCO TVET TIMOR-LESTE.
               All Rights Reserved.
             </p>
           </div>

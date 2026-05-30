@@ -48,7 +48,7 @@ export default function NewsGridSection() {
           News & Events
         </h2>
 
-        <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-base leading-relaxed">
           Further sustainable growth of these works could be ensured through a
           networking of the Salesians of Don Bosco in the ASEAN region.
         </p>
@@ -86,7 +86,7 @@ export default function NewsGridSection() {
                   </p>
                 )}
 
-                <h3 className="text-sm sm:text-base font-semibold text-gray-800 mt-1 leading-snug group-hover:text-[#F59E0B] transition">
+                <h3 className="text-base font-semibold text-gray-800 mt-1 leading-snug group-hover:text-[#F59E0B] transition">
                   {item.title}
                 </h3>
               </Link>
@@ -100,7 +100,7 @@ export default function NewsGridSection() {
           </p>
         )}
 
-        <div className="flex justify-center mt-10 gap-4 items-center text-sm sm:text-base">
+        <div className="flex justify-center mt-10 gap-4 items-center text-base">
           <span className="cursor-pointer hover:text-[#F59E0B]">1</span>
           <span className="cursor-pointer hover:text-[#F59E0B]">2</span>
           <span className="cursor-pointer hover:text-[#F59E0B]">3</span>

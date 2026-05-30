@@ -5,14 +5,7 @@ export default function AboutNetwork() {
     <main className="w-full overflow-hidden">
       {/* TOP SECTION */}
       <section className="relative min-h-[700px] md:min-h-[600px] flex items-center justify-center py-16 md:py-0">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="/ourNetworkBG.jpg"
-            alt="Background"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/40"></div>
@@ -37,7 +30,7 @@ export default function AboutNetwork() {
               Our Networks
             </h1>
 
-            <p className="text-gray-700 text-sm sm:text-base leading-relaxed max-w-xl mx-auto md:mx-0">
+            <p className="text-gray-700 text-base leading-relaxed max-w-xl mx-auto md:mx-0">
               Don Bosco Tech ASEAN is a network of ASEAN countries in 7 (+1)
               consisting of the Philippines, Indonesia, Thailand, Vietnam,
               Cambodia, Myanmar, Laos, and Timor-Leste.
@@ -57,7 +50,7 @@ export default function AboutNetwork() {
                 Overall Objective
               </h2>
 
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-700 text-base leading-relaxed">
                 Contribute to fighting poverty and qualifying marginalized young
                 people in seven (+1) ASEAN countries.
               </p>
@@ -69,7 +62,7 @@ export default function AboutNetwork() {
                 Project Objectives
               </h2>
 
-              <ol className="text-gray-700 text-sm sm:text-base list-decimal list-inside space-y-3 leading-relaxed">
+              <ol className="text-gray-700 text-base list-decimal list-inside space-y-3 leading-relaxed">
                 <li>
                   Increased placement-rate and training-appropriate (and
                   accordingly paid) employment amongst TVET Graduates.

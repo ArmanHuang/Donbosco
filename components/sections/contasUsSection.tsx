@@ -41,7 +41,7 @@ export default function ContactPage() {
               Get in Touch with Us
             </h2>
 
-            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed text-base">
               You are someone who is important to us, so please use this page if
               you have any questions or needed information.
             </p>
@@ -136,7 +136,7 @@ function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6 text-left text-black">
       <div>
-        <label className="block mb-2 font-medium text-sm sm:text-base">
+        <label className="block mb-2 font-medium text-base">
           Full Name
         </label>
 
@@ -151,7 +151,7 @@ function ContactForm() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <div>
-          <label className="block mb-2 font-medium text-sm sm:text-base">
+          <label className="block mb-2 font-medium text-base">
             Email Address
           </label>
 
@@ -166,7 +166,7 @@ function ContactForm() {
         </div>
 
         <div>
-          <label className="block mb-2 font-medium text-sm sm:text-base">
+          <label className="block mb-2 font-medium text-base">
             Mobile No.
           </label>
 
@@ -181,7 +181,7 @@ function ContactForm() {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium text-sm sm:text-base">
+        <label className="block mb-2 font-medium text-base">
           Subject
         </label>
 
@@ -195,7 +195,7 @@ function ContactForm() {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium text-sm sm:text-base">
+        <label className="block mb-2 font-medium text-base">
           Message
         </label>
 
@@ -219,7 +219,7 @@ function ContactForm() {
       </div>
 
       {success && (
-        <p className="text-green-600 text-center text-sm sm:text-base">
+        <p className="text-green-600 text-center text-base">
           ✅ Message sent successfully!
         </p>
       )}
@@ -307,7 +307,7 @@ function RegistrationForm() {
     <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6 text-left text-black">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <div>
-          <label className="block mb-2 font-medium text-sm sm:text-base">
+          <label className="block mb-2 font-medium text-base">
             Full Name
           </label>
 
@@ -321,7 +321,7 @@ function RegistrationForm() {
         </div>
 
         <div>
-          <label className="block mb-2 font-medium text-sm sm:text-base">
+          <label className="block mb-2 font-medium text-base">
             Last Education
           </label>
 
@@ -342,7 +342,7 @@ function RegistrationForm() {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium text-sm sm:text-base">
+        <label className="block mb-2 font-medium text-base">
           Address
         </label>
 
@@ -357,7 +357,7 @@ function RegistrationForm() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <div>
-          <label className="block mb-2 font-medium text-sm sm:text-base">
+          <label className="block mb-2 font-medium text-base">
             Email Address
           </label>
 
@@ -372,7 +372,7 @@ function RegistrationForm() {
         </div>
 
         <div>
-          <label className="block mb-2 font-medium text-sm sm:text-base">
+          <label className="block mb-2 font-medium text-base">
             Mobile No.
           </label>
 
@@ -387,7 +387,7 @@ function RegistrationForm() {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium text-sm sm:text-base">
+        <label className="block mb-2 font-medium text-base">
           Country
         </label>
 
@@ -408,7 +408,7 @@ function RegistrationForm() {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium text-sm sm:text-base">
+        <label className="block mb-2 font-medium text-base">
           Program
         </label>
 
@@ -427,7 +427,7 @@ function RegistrationForm() {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium text-sm sm:text-base">
+        <label className="block mb-2 font-medium text-base">
           Message
         </label>
 
@@ -451,7 +451,7 @@ function RegistrationForm() {
       </div>
 
       {success && (
-        <p className="text-green-600 text-center text-sm sm:text-base">
+        <p className="text-green-600 text-center text-base">
           Registration submitted successfully!
         </p>
       )}

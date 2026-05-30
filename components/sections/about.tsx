@@ -29,10 +29,10 @@ export default function About() {
         {/* Content */}
         <div className="flex flex-col text-center md:text-left">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F59E0B] leading-tight mt-0 md:mt-20 lg:mt-36 mb-6">
-            About Don Bosco <br className="hidden sm:block" /> Tech ASEAN
+            About DON BOSCO<br className="hidden sm:block" /> TVET TIMOR-LESTE
           </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-8 text-sm sm:text-base">
+          <p className="text-gray-700 leading-relaxed mb-8 text-base">
             Technical and Vocational Education and Training (TVET) comprises
             education, training and skills development relating to a wide range
             of occupational fields, production services and livelihoods. TVET

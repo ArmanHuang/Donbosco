@@ -61,7 +61,7 @@ export default function CardSlider({ data }: Props) {
                     />
                   </div>
 
-                  <p className="text-blue-950 font-medium text-sm sm:text-base group-hover:text-[#F59E0B] transition">
+                  <p className="text-blue-950 font-medium text-base group-hover:text-[#F59E0B] transition">
                     {item.title}
                   </p>
                 </Link>

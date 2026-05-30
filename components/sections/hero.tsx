@@ -57,7 +57,7 @@ export default function Hero() {
           Technical Leaders
         </h1>
 
-        <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-md md:max-w-xl mb-7 md:mb-8 leading-relaxed">
+        <p className="text-gray-200 text-base md:text-lg max-w-md md:max-w-xl mb-7 md:mb-8 leading-relaxed">
           Providing world-class technical education and global opportunities for
           the next generation.
         </p>

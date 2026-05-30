@@ -23,7 +23,7 @@ export default function AboutUs() {
             About Us
           </h1>
 
-          <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">
+          <p className="text-gray-700 mb-4 leading-relaxed text-base text-justify">
             Don Bosco Tech ASEAN is a network of seven (+1) ASEAN countries to
             build common understanding and effective communication in efforts
             to contribute to fighting poverty and improving the quality of
@@ -31,7 +31,7 @@ export default function AboutUs() {
             (Technical and Vocational Education and Training) centers.
           </p>
 
-          <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">
+          <p className="text-gray-700 mb-4 leading-relaxed text-base text-justify">
             Don Bosco Tech ASEAN has played an active role in developing 36
             TVET centers with a total of around 9,000 students who are
             accompanied by around 800 qualified and certified trainers and
@@ -40,14 +40,14 @@ export default function AboutUs() {
             27,000 students.
           </p>
 
-          <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">
+          <p className="text-gray-700 mb-4 leading-relaxed text-base text-justify">
             Our indirect targets are the development of the family and social
             environment of the trainees, government institutions in the area of
             developing TVET centers, collaborating with companies as training
             partners and prospective employers.
           </p>
 
-          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+          <p className="text-gray-700 leading-relaxed text-base text-justify">
             Our member countries are Philippines, Indonesia, Thailand,
             Cambodia, Vietnam, Myanmar, Laos and Timor-Leste. In our efforts,
             we collaborate intensively, effectively and continuously with
