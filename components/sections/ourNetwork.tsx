@@ -26,7 +26,7 @@ export default function NetworkPage() {
             Our Network
           </h2>
 
-          <p className="text-base md:text-lg text-black leading-relaxed max-w-xl mx-auto md:mx-0">
+          <p className="text-base text-black leading-relaxed max-w-xl mx-auto md:mx-0">
             Don Bosco Tech ASEAN is a network of ASEAN countries in 7 (+1)
             consisting of the Philippines, Indonesia, Thailand, Vietnam,
             Cambodia, Myanmar, Laos, and Timor-Leste.
