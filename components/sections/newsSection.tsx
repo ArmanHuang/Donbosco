@@ -51,7 +51,7 @@ export default function NewsSection() {
         {/* Card */}
         <div className="max-w-[1200px] w-full mx-auto bg-white rounded-2xl shadow-xl p-5 sm:p-8 md:p-10 lg:p-12 min-h-[360px] md:min-h-[442px]">
           {loading && (
-            <p className="text-gray-500 text-base">
+            <p className="text-gray-500 text-base text-justify">
               Loading news...
             </p>
           )}

@@ -32,7 +32,7 @@ export default function About() {
             About DON BOSCO<br className="hidden sm:block" /> TVET TIMOR-LESTE
           </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-8 text-base">
+          <p className="text-gray-700 leading-relaxed mb-8 text-base text-justify">
             Technical and Vocational Education and Training (TVET) comprises
             education, training and skills development relating to a wide range
             of occupational fields, production services and livelihoods. TVET
