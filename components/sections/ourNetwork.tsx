@@ -4,13 +4,7 @@ export default function NetworkPage() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/ourNetworkBG.jpg"
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/40"></div>
