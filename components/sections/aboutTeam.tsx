@@ -44,14 +44,12 @@ export default function AboutTeam() {
     },
     {
       name: "Mark Carlos Tito Gumapon",
-      role: "DON BOSCO
-TVET TIMOR-LESTE Central Office Managing Director",
+      role: "DON BOSCO TVET TIMOR-LESTE Central Office Managing Director",
       img: "/mark.png",
     },
     {
       name: "John Nicollo Oviedo",
-      role: "DON BOSCO
-TVET TIMOR-LESTE Central Office Admin Assistant",
+      role: "DON BOSCO TVET TIMOR-LESTE Central Office Admin Assistant",
       img: "/john.png",
     },
   ];
